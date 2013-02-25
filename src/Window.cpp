@@ -15,6 +15,7 @@ namespace Window {
 		while (Window->pollEvent(e)) {
 			Events::Process(e);
 		}
+		Window->display();
 	}
 
 	void Unload() {
