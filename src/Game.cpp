@@ -13,6 +13,7 @@ bool Game::Init() {
 }
 
 void Game::Update() {
+	Events::Update();
 	View::Update();
 	Game::Window->display();
 }
