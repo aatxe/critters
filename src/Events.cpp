@@ -1,17 +1,16 @@
 #include "Global.hpp"
 
-void Events::Update() {
-	sf::Event e;
-	while(Game::Window->pollEvent(e)) {
+namespace Events {
+	void Process(sf::Event e) {
 		switch (e.type) {
 			case sf::Event::Closed:
-				Game::Window->close();
+				Window::close();
 				break;
 			case sf::Event::GainedFocus:
-				Game::Active = true;
+				Game::setActive(true);
 				break;
 			case sf::Event::LostFocus:
-				Game::Active = false;
+				Game::setActive(false);
 				break;
 			default:
 				break;

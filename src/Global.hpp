@@ -10,5 +10,6 @@
 
 // Critters
 #include "Game.hpp"
+#include "Window.hpp"
 #include "View.hpp"
 #include "Events.hpp"

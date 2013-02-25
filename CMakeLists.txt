@@ -24,6 +24,8 @@ src/Global.hpp
 src/Main.cpp
 src/Game.cpp
 src/Game.hpp
+src/Window.cpp
+src/Window.hpp
 src/View.cpp
 src/View.hpp
 src/Events.cpp

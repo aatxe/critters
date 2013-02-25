@@ -1,5 +1,5 @@
 #pragma once
 
 namespace Events {
-	void Update();
+	void Process(sf::Event e);
 }

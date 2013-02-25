@@ -2,7 +2,7 @@
 
 int main() {
 	if (!Game::Init()) return EXIT_FAILURE;
-	while (Game::Window->isOpen()) {
+	while (Window::isOpen()) {
 		Game::Update();
 	}
 	Game::Unload();
