@@ -22,6 +22,12 @@ endif ()
 add_executable(critters
 src/Global.hpp
 src/Main.cpp
+src/Game.cpp
+src/Game.hpp
+src/View.cpp
+src/View.hpp
+src/Events.cpp
+src/Events.hpp
 )
 
 target_link_libraries(critters ${SFML_LIBRARIES} ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
