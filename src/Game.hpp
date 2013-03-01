@@ -1,9 +1,9 @@
 #pragma once
 
 namespace Game {
-	bool Init();
-	void Update();
-	void Unload();
+	bool init();
+	void update();
+	void unload();
 	bool isActive();
 	void setActive(bool active);
 }

@@ -3,27 +3,35 @@
 namespace Window {
 	sf::Window* Window;
 
-	bool Init() {
-		Window = new sf::Window(sf::VideoMode(800, 600), "Window");
+	bool init() {
+		Window = new sf::Window(sf::VideoMode::getDesktopMode(), "Critters", sf::Style::Fullscreen);
 		Window->setFramerateLimit(60);
 		Window->setActive();
 		return true;
 	}
 
-	void Update() {
+	void update() {
 		sf::Event e;
 		while (Window->pollEvent(e)) {
-			Events::Process(e);
+			Events::process(e);
 		}
 		Window->display();
 	}
 
-	void Unload() {
+	void unload() {
 		delete Window;
 	}
 	
 	bool isOpen() {
 		return Window->isOpen();
+	}
+	
+	unsigned int width() {
+		return Window->getSize().y;
+	}
+	
+	unsigned int height() {
+		return Window->getSize().x;
 	}
 
 	void close() {

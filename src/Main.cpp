@@ -1,10 +1,10 @@
 #include "Global.hpp"
 
 int main() {
-	if (!Game::Init()) return EXIT_FAILURE;
+	if (!Game::init()) return EXIT_FAILURE;
 	while (Window::isOpen()) {
-		Game::Update();
+		Game::update();
 	}
-	Game::Unload();
+	Game::unload();
 	return EXIT_SUCCESS;
 }

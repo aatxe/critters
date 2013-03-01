@@ -30,6 +30,10 @@ src/View.cpp
 src/View.hpp
 src/Events.cpp
 src/Events.hpp
+src/Utilities/Program.cpp
+src/Utilities/Program.hpp
+src/Utilities/Shader.cpp
+src/Utilities/Shader.hpp
 )
 
 target_link_libraries(critters ${SFML_LIBRARIES} ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})

@@ -1,9 +1,11 @@
 #pragma once
 
 namespace Window {
-	bool Init();
-	void Update();
-	void Unload();
+	bool init();
+	void update();
+	void unload();
 	bool isOpen();
+	unsigned int width();
+	unsigned int height();
 	void close();
 }

@@ -1,30 +1,30 @@
 #include "Global.hpp"
 
 namespace Game {
-	bool Active = true;
+	bool is_active = true;
 
-	bool Init() {
+	bool init() {
 		bool ret = true;
-		ret &= Window::Init();
-		ret &= View::Init();
+		ret &= Window::init();
+		ret &= View::init();
 		return ret;
 	}
 
 	bool isActive() {
-		return Active;
+		return is_active;
 	}
 
 	void setActive(bool active) {
-		Active = active;
+		is_active = active;
 	}
 
-	void Update() {
-		Window::Update();
-		View::Update();
+	void update() {
+		Window::update();
+		View::update();
 	}
 
-	void Unload() {
-		View::Unload();
-		Window::Unload();
+	void unload() {
+		View::unload();
+		Window::unload();
 	}
 }
