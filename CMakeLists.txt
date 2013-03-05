@@ -34,6 +34,8 @@ src/Utilities/Program.cpp
 src/Utilities/Program.hpp
 src/Utilities/Shader.cpp
 src/Utilities/Shader.hpp
+src/Camera.cpp
+src/Camera.hpp
 )
 
 target_link_libraries(critters ${SFML_LIBRARIES} ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})

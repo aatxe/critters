@@ -15,6 +15,14 @@ namespace Events {
 			case sf::Event::KeyPressed:
 				if (e.key.code == sf::Keyboard::Q)
 					Window::close();
+				else if (e.key.code == sf::Keyboard::W)
+					Camera::translateY(10);
+				else if (e.key.code == sf::Keyboard::S)
+					Camera::translateY(-10);
+				else if (e.key.code == sf::Keyboard::A)
+					Camera::translateX(-10);
+				else if (e.key.code == sf::Keyboard::D)
+					Camera::translateX(10);
 				break;
 			default:
 				break;
