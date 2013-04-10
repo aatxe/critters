@@ -19,23 +19,12 @@ if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGXX OR "${CMAKE_CXX_COMPIL
     add_definitions("-std=c++11 -pedantic -Wall -Wextra")
 endif ()
 
-add_executable(critters
-src/Global.hpp
-src/Main.cpp
-src/Game.cpp
-src/Game.hpp
-src/Window.cpp
-src/Window.hpp
-src/View.cpp
-src/View.hpp
-src/Events.cpp
-src/Events.hpp
-src/Utilities/Program.cpp
-src/Utilities/Program.hpp
-src/Utilities/Shader.cpp
-src/Utilities/Shader.hpp
-src/Camera.cpp
-src/Camera.hpp
-)
+# src globbing
+FILE(GLOB Sources src/*.cpp)
+FILE(GLOB Headers src/*.hpp)
+
+add_executable(critters ${Sources} ${Headers} 
+src/Utilities/Program.hpp src/Utilities/Program.cpp
+src/Utilities/Shader.hpp src/Utilities/Shader.cpp)
 
 target_link_libraries(critters ${SFML_LIBRARIES} ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
